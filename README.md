@@ -1,6 +1,6 @@
 # Lightweight MSISDN representation as a Python class and fake MSISDN generator
 
-This library was started as apart of testing CDR files generation and later I decided to make 
+This library was started as apart of testing CDR (Call Data Record) files generation and later I decided to make 
 a separate repository for the MSISDNS only.
 The repository also includes Fake MSISDN generator class which is of general purpose and 
 configurable with the parameters passed to the constructor.
