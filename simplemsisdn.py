@@ -3,6 +3,8 @@ class IncorrectMsisdnData(ValueError):
         super().__init__(msg)
 
 
+
+
 class SimpleMSISDN(object):
 
     def __init__(self,
@@ -39,7 +41,11 @@ class SimpleMSISDN(object):
         self.__subscriber_number = str(subscriber_number)
         
         # This is to be defined as GOLDEN, SILVER etc.
-        self.number_grade = None
+        self.number_grade = self.detect_number_class()
+
+    def detect_number_class(self):
+        # TODO: add check_gold, check_silver, check_bronze, check_super
+        return 'REGULAR'
 
     def __repr__(self):
         return f'{self.__country_code}{self.__national_destination_code}{self.__subscriber_number}'
@@ -56,4 +62,4 @@ class SimpleMSISDN(object):
 if __name__ == '__main__':
     a = SimpleMSISDN(380, 22, 33)
 # TODO: add verifications for the components, use the existing phonenumber lib? add link to the phonenumber repo
-# TODO: add check_gold, check_silver, check_bronze, check_super
+
