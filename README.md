@@ -21,7 +21,7 @@ newnumber = SimpleMSISDN(country_code='some country code',
                          subscriber_number='some subscriber number')
 ```
 
-FakeMSISDNGenerator makes use of SimpleMSISDN and can be used as below:
+FakeMSISDNGenerator makes use of SimpleMSISDN and can be invoked as below:
 ```
 anumber = FakeMsisdnGenerator(allowed_country_codes=('380',),
                               allowed_national_destination_codes=mobile_ndc,
