@@ -1,4 +1,4 @@
-# Lightweight MSISDN representation as a Python class
+# Lightweight MSISDN representation as a Python class and fake MSISDN generator
 
 This library was started as apart of testing CDR files generation and later I decided to make 
 a separate repository for the MSISDNS only.
