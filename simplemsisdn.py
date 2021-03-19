@@ -31,6 +31,11 @@ class SimpleMSISDN(object):
             (e.g. 93 Lifecell, Ukraine), no validation applied
         :param subscriber_number: several digits personal subscriber number
         :raises IncorrectMsisdnData if any of the params is None or empty
+
+        Attributes:
+
+        number_class: Commercial class of the Subscriber Number e.g. 'GOLDEN', 'SILVER', 'BRONZE', 'REGULAR'
+
         """
 
         if not country_code or not national_destination_code or not subscriber_number:
@@ -41,9 +46,9 @@ class SimpleMSISDN(object):
         self.__subscriber_number = str(subscriber_number)
         
         # This is to be defined as GOLDEN, SILVER etc.
-        self.number_grade = self.detect_number_class()
+        self.number_class = self.__detect_number_class()
 
-    def detect_number_class(self):
+    def __detect_number_class(self):
         # TODO: add check_gold, check_silver, check_bronze, check_super
         return 'REGULAR'
 

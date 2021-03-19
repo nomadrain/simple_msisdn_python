@@ -20,7 +20,7 @@ class Test_Simple_MSISDN(unittest.TestCase):
             a = SimpleMSISDN()
             
     def test_class_detection_is_functional(self):
-        self.assertEqual('REGULAR', self.msisdn.number_grade)
+        self.assertEqual('REGULAR', self.msisdn.number_class)
 
 
 if __name__ == '__main__':
