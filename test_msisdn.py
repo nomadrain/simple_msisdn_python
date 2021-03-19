@@ -2,7 +2,7 @@ import unittest
 from simplemsisdn import SimpleMSISDN, IncorrectMsisdnData
 
 
-class Test_Simple_MSISDN(unittest.TestCase):
+class TestSimpleMSISDN(unittest.TestCase):
 
     def setUp(self):
         self.msisdn = SimpleMSISDN(country_code='380',

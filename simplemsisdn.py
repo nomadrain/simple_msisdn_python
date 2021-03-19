@@ -3,8 +3,6 @@ class IncorrectMsisdnData(ValueError):
         super().__init__(msg)
 
 
-
-
 class SimpleMSISDN(object):
 
     def __init__(self,
@@ -44,7 +42,7 @@ class SimpleMSISDN(object):
         self.__country_code = str(country_code)
         self.__national_destination_code = str(national_destination_code)
         self.__subscriber_number = str(subscriber_number)
-        
+
         # This is to be defined as GOLDEN, SILVER etc.
         self.number_class = self.__detect_number_class()
 
@@ -67,4 +65,3 @@ class SimpleMSISDN(object):
 if __name__ == '__main__':
     a = SimpleMSISDN(380, 22, 33)
 # TODO: add verifications for the components, use the existing phonenumber lib? add link to the phonenumber repo
-
