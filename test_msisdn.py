@@ -38,6 +38,9 @@ class TestFakeMsisdnGenerator(unittest.TestCase):
         )
 
     def test_able_to_generate(self):
+        """
+        If the generator is able to produce TNs
+        """
         tn = self.gn.get()
         self.assertIsInstance(tn, SimpleMSISDN)
 
