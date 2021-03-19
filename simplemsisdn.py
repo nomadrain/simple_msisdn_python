@@ -61,6 +61,14 @@ class SimpleMSISDN(object):
                      self.__national_destination_code,
                      self.__subscriber_number))
 
+    def get_local_only(self, leading_zero=False):
+        """
+        :param: leading_zero, bool. If True adds 0 to the beginning of the local representation
+        :return: MSISDN as a string of digits without country code
+        """
+        zero = '0' if leading_zero else ''
+        return f'{zero}{self.__national_destination_code}{self.__subscriber_number}'
+
 
 if __name__ == '__main__':
     a = SimpleMSISDN(380, 22, 33)
