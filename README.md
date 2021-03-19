@@ -16,9 +16,9 @@ Use it in Python code like below:
 ```
 from simplemsisdn import SimpleMSISDN
 
-newnumber = SimpleMSISDN(country_code={some country code}, 
-                         national_destination_code={some national destination code}, 
-                         subscriber_number={some subscriber number})
+newnumber = SimpleMSISDN(country_code='some country code', 
+                         national_destination_code='some national destination code', 
+                         subscriber_number='some subscriber number')
 ```
 
 FakeMSISDNGenerator makes use of SimpleMSISDN and can be used as below:
