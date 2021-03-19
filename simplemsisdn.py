@@ -55,5 +55,5 @@ class SimpleMSISDN(object):
 
 if __name__ == '__main__':
     a = SimpleMSISDN(380, 22, 33)
-# TODO: add verifications for the components, use the existing phonenumber lib?
+# TODO: add verifications for the components, use the existing phonenumber lib? add link to the phonenumber repo
 # TODO: add check_gold, check_silver, check_bronze, check_super
