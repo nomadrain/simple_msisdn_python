@@ -1,2 +1,6 @@
 # Lightweight MSISDN representation as a Python class
-Lightweight MSISDN representation
+
+Use it in Python code like below:
+
+
+from simplemsisdn import SimpleMSISDN
