@@ -18,7 +18,7 @@ The repository also includes Fake MSISDN generator class which is of general pur
 configurable with the parameters passed to the constructor. The class is for creating the simulation data in various test cases
 
 **Fake MSISDN** generator imports national destination codes from the ```ua_ndc``` module which 
-contains two lists for the valid Ukrainian landline and mobile ndcs gathered from Wikipedia. To replace it with 
+contains two lists for the valid Ukrainian landline and mobile NDCs gathered from Wikipedia. To replace it with 
 different references just prepare another destination codes module and replace the import
  in fake_msisdn_generator module. 
  Currently I am not going to cover all the countries' destination codes. 
@@ -46,27 +46,30 @@ For the invocation with the parameters listed above the output will be like belo
 
 **all coincidences with real numbers are artificial and non-intended**
 ```
-+380-63-1093245
-+380-39-8501255
-+380-94-8001598
-+380-39-1977503
-+380-66-3426067
-+380-97-5192392
-+380-96-1159778
-+380-95-8216678
-+380-63-7074756
-+380-98-2686848
++999-68-2810437
++999-96-4388457
++999-67-9642448
++999-67-7530780
++999-97-6872919
++999-68-2857783
++999-50-9801429
++999-92-8556433
++999-93-0827561
++999-99-6211828
 
-380941347925
-380394049112
-380667919089
-380390100878
-380676478840
-380959549396
-380509295168
-380503150128
-380952222830
-380948711415
+999986426306
+999669327617
+999998887083
+999686668838
+999927606255
+999999837217
+999508727895
+999662919604
+999987611076
+999959028298
+
+Process finished with exit code 0
+
 ```
 
 ## Tests
