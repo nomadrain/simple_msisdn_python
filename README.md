@@ -5,6 +5,9 @@ a separate repository for the MSISDNS only.
 The repository also includes Fake MSISDN generator class which is of general purpose and 
 configurable with the parameters passed to the constructor.
 
+## FakeMSISDNGenerator
+The class is for creating the simulation data in various test cases
+
 **Fake MSISDN** generator imports national destination codes from the **ua_ndc** module which 
 contains two lists for the valid Ukrainian landline and mobile ndcs gathered from Wikipedia. To replace it with 
 different references just prepare another destination codes module and replace the import
@@ -78,3 +81,4 @@ In the meantime please install the provided libraries using 'git clone':
 ```
 git clone https://github.com/nomadrain/simple_msisdn_python.git
 ```
+or download the whole zip package and extract to the desirable destination
