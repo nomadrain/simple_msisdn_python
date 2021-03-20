@@ -22,12 +22,14 @@ class FakeMsisdnGenerator():
     :param allowed_country_codes - Iterable of strings
     :param allowed_national_destination_codes - Iterable of strings
     :param subscriber_number_length - scalar int
+    :param preferable_ndc - National destination code which will be selected with %90 probability
     """
 
     def __init__(self,
                  allowed_country_codes=('+000', '+111'),
                  allowed_national_destination_codes=('11', '22', '33'),
-                 subscriber_number_length=7
+                 subscriber_number_length=7,
+                 preferable_ndc='50'
                  ):
         if allowed_country_codes:
             self.allowed_country_codes = allowed_country_codes
@@ -44,6 +46,11 @@ class FakeMsisdnGenerator():
         else:
             self.subscriber_number_length = 7
 
+        if preferable_ndc:
+            self.preferable_ndc = preferable_ndc
+        else:
+            preferable_ndc = '50'
+
     def get(self):
         """
         :return: Instance of SimpleMSISDN with a country code and a national destination code randomly selected from
@@ -51,7 +58,7 @@ class FakeMsisdnGenerator():
         """
         random.seed(time())
         cc = random.choice(self.allowed_country_codes)
-        ndc = random.choice(self.allowed_national_destination_codes)
+        ndc = random.choices((self.preferable_ndc, random.choice(self.allowed_national_destination_codes)), weights=(90,10), k=1)[0]
         sn = ''.join(random.choices(string.digits, k=self.subscriber_number_length))
         return SimpleMSISDN(country_code=cc, national_destination_code=ndc, subscriber_number=sn)
 
@@ -59,7 +66,8 @@ class FakeMsisdnGenerator():
 if __name__ == '__main__':
     anumber = FakeMsisdnGenerator(allowed_country_codes=('999',),
                                   allowed_national_destination_codes=mobile_ndc,
-                                  subscriber_number_length=7)
+                                  subscriber_number_length=7,
+                                  preferable_ndc='50')
     for numcount in range(10):
         print(str(anumber.get()))
 
