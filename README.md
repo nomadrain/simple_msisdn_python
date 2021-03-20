@@ -2,7 +2,7 @@
 
 ## SimpleMSISDN
 This package was started as apart of testing CDR (Call Detail Record) files generation and later I decided to make 
-a separate repository for the MSISDNS only.
+a separate repository for MSISDNs only.
 
 Use it in Python code like below:
 ```
@@ -17,7 +17,7 @@ newnumber = SimpleMSISDN(country_code='some country code',
 The repository also includes Fake MSISDN generator class which is of general purpose and 
 configurable with the parameters passed to the constructor. The class is for creating the simulation data in various test cases
 
-**Fake MSISDN** generator imports national destination codes from the **ua_ndc** module which 
+**Fake MSISDN** generator imports national destination codes from the ```ua_ndc``` module which 
 contains two lists for the valid Ukrainian landline and mobile ndcs gathered from Wikipedia. To replace it with 
 different references just prepare another destination codes module and replace the import
  in fake_msisdn_generator module. 
