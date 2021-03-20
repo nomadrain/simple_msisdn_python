@@ -1,4 +1,4 @@
-# Lightweight MSISDN representation as a Python class and fake MSISDN generator
+# Lightweight mobile phone number (MSISDN) representation as a Python class and fake MSISDN generator
 
 ## SimpleMSISDN
 This package was started as apart of testing CDR (Call Detail Record) files generation and later I decided to make 
