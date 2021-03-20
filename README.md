@@ -69,4 +69,12 @@ For the invocation with the parameters listed above the output will be like
 * Tests require unittest Python lib installed. 
 Just run it to make sure nothing is broken during the latest commits.
 * Tests cover both SimpleMSISDN and FakeMsisdnGenerator classes
-                     
+
+## Installation
+I did not create a PyPi package for this repository because currently FakeMsisdnGenerator uses local data for sampling. Nevertheless, this behavior can be easily changed using
+the class parameters.
+
+In the meantime please install the provided libraries using 'git clone':                     
+```
+git clone https://github.com/nomadrain/simple_msisdn_python.git
+```

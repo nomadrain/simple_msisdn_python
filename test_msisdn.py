@@ -29,12 +29,15 @@ class TestSimpleMSISDN(unittest.TestCase):
     def test_get_local_only_leading_zero(self):
         self.assertEqual(self.msisdn.get_local_only(leading_zero=True), '0337629567')
 
+    def test_get_ndc(self):
+        self.assertEqual(self.msisdn.get_ndc(), '33')
+
 
 class TestFakeMsisdnGenerator(unittest.TestCase):
 
     def setUp(self):
         self.gn = FakeMsisdnGenerator(
-            allowed_country_codes=['111',], allowed_national_destination_codes=['11'], subscriber_number_length=10
+            allowed_country_codes=['111', ], allowed_national_destination_codes=['11'], subscriber_number_length=10
         )
 
     def test_able_to_generate(self):
