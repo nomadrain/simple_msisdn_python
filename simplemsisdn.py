@@ -69,6 +69,13 @@ class SimpleMSISDN(object):
         zero = '0' if leading_zero else ''
         return f'{zero}{self.__national_destination_code}{self.__subscriber_number}'
 
+    def get_ndc(self):
+        """
+
+        :return: the NDC code
+        """
+        return self.__national_destination_code
+
 
 if __name__ == '__main__':
     a = SimpleMSISDN(380, 22, 33)
