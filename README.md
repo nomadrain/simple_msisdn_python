@@ -27,6 +27,9 @@ different references just prepare another destination codes module and replace t
 
 FakeMSISDNGenerator makes use of SimpleMSISDN and can be invoked as below:
 ```
+from ua_ndc import mobile_ndc
+from fake_msisdn_generator import FakeMsisdnGenerator
+
 anumber = FakeMsisdnGenerator(allowed_country_codes=('999',),
                               allowed_national_destination_codes=mobile_ndc,
                               subscriber_number_length=7)
