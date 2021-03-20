@@ -1,19 +1,8 @@
 # Lightweight MSISDN representation as a Python class and fake MSISDN generator
 
-This library was started as apart of testing CDR (Call Detail Record) files generation and later I decided to make 
+## SimpleMSISDN
+This package was started as apart of testing CDR (Call Detail Record) files generation and later I decided to make 
 a separate repository for the MSISDNS only.
-The repository also includes Fake MSISDN generator class which is of general purpose and 
-configurable with the parameters passed to the constructor.
-
-## FakeMSISDNGenerator
-The class is for creating the simulation data in various test cases
-
-**Fake MSISDN** generator imports national destination codes from the **ua_ndc** module which 
-contains two lists for the valid Ukrainian landline and mobile ndcs gathered from Wikipedia. To replace it with 
-different references just prepare another destination codes module and replace the import
- in fake_msisdn_generator module. 
- Currently I am not going to cover all the countries' destination codes. 
- If you want to include anything for extension into this repo please send me a note (nomadrain@gmail.com)
 
 Use it in Python code like below:
 ```
@@ -23,6 +12,18 @@ newnumber = SimpleMSISDN(country_code='some country code',
                          national_destination_code='some national destination code', 
                          subscriber_number='some subscriber number')
 ```
+
+## FakeMSISDNGenerator
+The repository also includes Fake MSISDN generator class which is of general purpose and 
+configurable with the parameters passed to the constructor. The class is for creating the simulation data in various test cases
+
+**Fake MSISDN** generator imports national destination codes from the **ua_ndc** module which 
+contains two lists for the valid Ukrainian landline and mobile ndcs gathered from Wikipedia. To replace it with 
+different references just prepare another destination codes module and replace the import
+ in fake_msisdn_generator module. 
+ Currently I am not going to cover all the countries' destination codes. 
+ If you want to include anything for extension into this repo please send me a note (nomadrain@gmail.com)
+
 
 FakeMSISDNGenerator makes use of SimpleMSISDN and can be invoked as below:
 ```
