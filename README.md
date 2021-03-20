@@ -39,7 +39,7 @@ for numcount in range(10):
     print(repr(anumber.get()))
 ```
 
-Each time when called FakeMsisdnGenerator.get() method will produce 
+Each time when called ```FakeMsisdnGenerator.get()``` method will produce 
 a new fake number basing on the provided constructor parameters.
 
 For the invocation with the parameters listed above the output will be like below 
