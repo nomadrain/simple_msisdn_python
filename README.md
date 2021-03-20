@@ -27,7 +27,7 @@ different references just prepare another destination codes module and replace t
 
 FakeMSISDNGenerator makes use of SimpleMSISDN and can be invoked as below:
 ```
-anumber = FakeMsisdnGenerator(allowed_country_codes=('380',),
+anumber = FakeMsisdnGenerator(allowed_country_codes=('999',),
                               allowed_national_destination_codes=mobile_ndc,
                               subscriber_number_length=7)
 for numcount in range(10):
