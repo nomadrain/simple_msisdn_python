@@ -47,7 +47,7 @@ a new fake number basing on the provided constructor parameters.
 
 For the invocation with the parameters listed above the output will be like below 
 
-**all coincidences with real numbers are artificial and non-intended**
+**any coincidence with real numbers is accidental.**
 ```
 +999-68-2810437
 +999-96-4388457
